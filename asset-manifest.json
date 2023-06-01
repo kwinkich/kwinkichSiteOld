@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/kwinkichSite/static/css/main.8dbdc93a.css",
+    "main.js": "/kwinkichSite/static/js/main.eee5d1a5.js",
+    "static/media/main-bg.png": "/kwinkichSite/static/media/main-bg.7880cd325b48b64dc934.png",
+    "index.html": "/kwinkichSite/index.html",
+    "main.8dbdc93a.css.map": "/kwinkichSite/static/css/main.8dbdc93a.css.map",
+    "main.eee5d1a5.js.map": "/kwinkichSite/static/js/main.eee5d1a5.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.8dbdc93a.css",
+    "static/js/main.eee5d1a5.js"
+  ]
+}
