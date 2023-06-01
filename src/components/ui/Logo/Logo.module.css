@@ -1,0 +1,12 @@
+.logo {
+	font-style: normal;
+	font-weight: 700;
+	font-size: 24px;
+	line-height: 29px;
+	color: var(--text-color);
+	transition: all 0.5s;
+}
+
+.logo:hover {
+	color: var(--acent-color);
+}
