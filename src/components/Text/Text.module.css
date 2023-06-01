@@ -64,13 +64,6 @@
 
 @media (max-width: 470px) {
 	.textStroke {
-		font-size: 42px;
-	}
-}
-
-
-@media (max-width: 370px) {
-	.textStroke {
-		font-size: 40px;
+		font-size: 46px;
 	}
 }
