@@ -1,0 +1,394 @@
+@import '../Btn/Btn.module.css';
+@import '../CardProject/CardProject.module.css';
+@import '../Footer/Footer.module.css';
+@import '../Header/Header.module.css';
+@import '../Image/Image.module.css';
+@import '../Logo/Logo.module.css';
+@import '../Media/Media.module.css';
+@import '../Skills/Skills.module.css';
+@import '../Text/Text.module.css';
+@import url('../../index.css');
+
+
+
+body {
+	background-color: #0A1623;
+}
+
+::-webkit-scrollbar {
+	width: 5px;
+	height: auto;
+	background-color: var(--bg-color);
+}
+
+::-webkit-scrollbar-thumb {
+	background: var(--acent-color);
+	border-radius: 10px;
+}
+
+.heading {
+	font-weight: 700;
+	font-size: 45px;
+	line-height: 55px;
+	color: var(--text-color);
+	margin-bottom: 38px;
+	text-align: center;
+}
+
+.heading span {
+	color: var(--acent-color);
+}
+
+:root {
+	--acent-color: #ce92e3;
+	--acent-color-opacity: #9f4abe57;
+	--bg-color: #0f1622;
+	--text-color: #fff;
+	--second-bg-color: #222a36;
+	--second-text-color: #d9d9d9;
+}
+
+.wrapper {
+	width: 100%;
+}
+
+.container {
+	max-width: 1370px;
+	margin: 0 auto;
+}
+
+/*HERO*/
+.heroContent {
+	display: flex;
+	align-items: center;
+	margin-bottom: 100px;
+}
+
+.heroImage {
+	max-width: 750px;
+}
+
+.heroImage img {
+	max-width: 100%;
+}
+
+.textAnimate {
+	font-weight: 600;
+	font-size: 40px;
+	line-height: 49px;
+	color: var(--second-text-color);
+	margin-bottom: 80px;
+}
+
+.textAnimate span {
+	position: relative;
+	color: transparent;
+	-webkit-text-stroke: .7px var(--acent-color);
+	background-image: linear-gradient(var(--acent-color), var(--acent-color));
+	background-repeat: no-repeat;
+	-webkit-background-clip: text;
+	background-position: -30rem 0;
+	animation: homeBgText 5s linear infinite;
+	animation-delay: 0.3s;
+}
+
+.textAnimate span::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 0;
+	height: 100%;
+	border-right: 2px solid var(--acent-color);
+	animation: homeCursorText 5s linear infinite;
+	animation-delay: 0.3s;
+	z-index: -1;
+}
+
+.flexIcons {
+	display: flex;
+	margin-top: 190px;
+}
+
+.iconLink {
+	position: relative;
+	padding: 10px 11px;
+	border: 2px solid var(--acent-color);
+	border-radius: 50%;
+	font-size: 32px;
+	color: var(--acent-color);
+	transition: all 0.5s;
+	overflow: hidden;
+}
+
+.iconLink::before {
+	content: '';
+	position: absolute;
+	width: 0;
+	height: 100%;
+	top: 0;
+	left: 0;
+	background-color: var(--acent-color);
+	transition: all 0.5s;
+	z-index: -1;
+}
+
+.iconLink:hover {
+	color: var(--bg-color);
+	box-shadow: 0px 0px 20px var(--acent-color-opacity);
+}
+
+.iconLink:hover::before {
+	width: 100%;
+}
+
+.iconLink:not(:last-child) {
+	margin-right: 20px;
+}
+
+/*ABOUT*/
+.aboutUs {
+	width: 100%;
+	background-color: var(--second-bg-color);
+}
+
+.contentAbout {
+	padding: 200px 0px;
+	margin: 0px;
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	align-items: center;
+}
+
+.paragraphAbout {
+	font-weight: 500;
+	font-size: 24px;
+	line-height: 140%;
+	color: var(--text-color);
+}
+
+
+/*Projects*/
+.projects {
+	padding: 220px 0px;
+	margin: 0px;
+}
+
+.projectsContent {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+/*SKILLS*/
+
+.skills {
+	padding: 220px 0px;
+	margin: 0px;
+	background-color: var(--second-bg-color);
+}
+
+.skillBlock {
+	display: flex;
+	justify-content: space-between;
+}
+
+/*MEDIA*/
+.media {
+	padding: 220px 0px;
+	margin: 0px;
+}
+
+.mediaContent {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+
+
+/* ANIMATION */
+
+@keyframes homeBgText {
+
+	0%,
+	10%,
+	100% {
+		background-position: -30rem 0;
+	}
+
+	65%,
+	85% {
+		background-position: 0rem 0;
+	}
+}
+
+@keyframes homeBgText {
+
+	0%,
+	10%,
+	100% {
+		background-position: -30rem 0;
+	}
+
+	65%,
+	85% {
+		background-position: 0rem 0;
+	}
+}
+
+@keyframes homeCursorText {
+
+	0%,
+	10%,
+	100% {
+		width: 0;
+	}
+
+	65%,
+	78%,
+	85% {
+		width: 100%;
+		opacity: 1;
+	}
+
+	75%,
+	81% {
+		opacity: 0;
+	}
+}
+
+
+/*MEDIA*/
+@media (max-width:1400px) {
+	.container {
+		max-width: 1250px;
+	}
+
+	.heroImage {
+		max-width: 650px;
+	}
+}
+
+@media (max-width: 1250px) {
+	.container {
+		max-width: 950px;
+	}
+
+	.heroImage {
+		display: none;
+	}
+}
+
+@media (max-width: 1070px) {
+	.container {
+		max-width: 750px;
+	}
+
+	.skillsContent h2 {
+		margin-bottom: 50px;
+	}
+
+	.skillBlock {
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+}
+
+@media (max-width: 740px) {
+	.container {
+		max-width: 520px;
+	}
+}
+
+@media (max-width: 570px) {
+	.textAnimate {
+		font-size: 34px;
+	}
+
+	@keyframes homeBgText {
+
+		0%,
+		10%,
+		100% {
+			background-position: -25rem 0;
+		}
+
+		65%,
+		85% {
+			background-position: 0rem 0;
+		}
+	}
+
+}
+
+@media (max-width: 520px) {
+	.container {
+		max-width: 420px;
+	}
+
+	.paragraphAbout {
+		font-size: 16px;
+	}
+
+	.flexIcons {
+		display: none;
+	}
+
+	.heading {
+		font-size: 34px;
+	}
+
+	.hero {
+		margin-bottom: 200px;
+	}
+
+	::-webkit-scrollbar {
+		width: none;
+		height: none;
+	}
+
+	::-webkit-scrollbar-thumb {
+		border-radius: none;
+	}
+}
+
+@media (max-width: 470px) {
+	body {
+		overflow-x: hidden;
+	}
+
+	.container {
+		max-width: 370px;
+	}
+
+	.textAnimate {
+		font-size: 30px;
+	}
+
+	@keyframes homeBgText {
+
+		0%,
+		10%,
+		100% {
+			background-position: -18rem 0;
+		}
+
+		65%,
+		85% {
+			background-position: 0rem 0;
+		}
+	}
+
+	.textAnimate {
+		font-size: 24px;
+	}
+}
+
+@media (max-width: 400px) {
+	.container {
+		max-width: 350px;
+	}
+}

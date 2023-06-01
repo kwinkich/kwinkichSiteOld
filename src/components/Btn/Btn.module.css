@@ -1,0 +1,43 @@
+@import url('../../index.css');
+
+.btn {
+	position: relative;
+	font-weight: 500;
+	font-size: 18px;
+	line-height: 22px;
+	color: var(--acent-color);
+	padding: 20px 40px;
+	border: 2px solid var(--acent-color);
+	transition: all 0.5s;
+	overflow: hidden;
+	z-index: 1;
+
+}
+
+.btn::before {
+	content: '';
+	position: absolute;
+	width: 0;
+	height: 100%;
+	top: 0;
+	left: 0;
+	background-color: var(--acent-color);
+	transition: all 0.5s;
+	z-index: -1;
+}
+
+.btn:hover {
+	color: var(--bg-color);
+	box-shadow: 0px 0px 30px var(--acent-color-opacity);
+}
+
+.btn:hover::before {
+	width: 100%;
+}
+
+
+@media (max-width: 520px) {
+	.btn {
+		font-size: 16px;
+	}
+}

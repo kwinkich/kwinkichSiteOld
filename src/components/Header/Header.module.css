@@ -1,0 +1,161 @@
+@import url('../../index.css');
+
+button {
+	border: none;
+}
+
+.header {
+	z-index: 100;
+	margin-bottom: 160px;
+}
+
+.container {
+	max-width: 1370px;
+	margin: 0 auto;
+}
+
+.content {
+	position: relative;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-top: 33px;
+}
+
+.nav ul {
+	display: flex;
+}
+
+.nav li:not(:last-child) {
+	margin-right: 30px;
+}
+
+.nav li a {
+	position: relative;
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 20px;
+	color: var(--text-color);
+}
+
+.nav li a::before {
+	content: '';
+	position: absolute;
+	width: 0;
+	height: 2px;
+	background-color: var(--acent-color);
+	top: 100%;
+	left: 0;
+	transition: all 0.5s;
+}
+
+.nav li a:hover::before {
+	width: 100%;
+}
+
+.lang {
+	display: flex;
+	gap: 15px;
+	align-items: center;
+}
+
+.lang p {
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 20px;
+	color: var(--text-color);
+}
+
+.lang button {
+	cursor: pointer;
+}
+
+.burger {
+	display: none;
+	position: relative;
+	z-index: 50;
+	left: 0;
+	align-items: center;
+	justify-content: flex-end;
+	width: 30px;
+	height: 18px;
+}
+
+.burger span {
+	position: absolute;
+	height: 2px;
+	width: 100%;
+	top: 8px;
+	background-color: #faf6f2;
+}
+
+.burger::before,
+.burger::after {
+	content: "";
+	position: absolute;
+	height: 2px;
+	width: 100%;
+	background-color: #faf6f2;
+	transition: all 0.3s ease 0s;
+}
+
+.burger::before {
+	top: 0;
+}
+
+.burger::after {
+	bottom: 0;
+}
+
+
+@media (max-width:1400px) {
+	.container {
+		max-width: 1250px;
+	}
+}
+
+@media (max-width: 1250px) {
+	.container {
+		max-width: 950px;
+	}
+}
+
+@media (max-width: 1070px) {
+	.container {
+		max-width: 750px;
+	}
+
+	.nav,
+	.lang {
+		display: none;
+	}
+
+	.burger {
+		display: block;
+	}
+}
+
+
+@media (max-width: 740px) {
+	.container {
+		max-width: 520px;
+	}
+}
+
+@media (max-width: 520px) {
+	.container {
+		max-width: 420px;
+	}
+}
+
+@media (max-width: 470px) {
+	.container {
+		max-width: 370px;
+	}
+}
+
+@media (max-width: 400px) {
+	.container {
+		max-width: 350px;
+	}
+}

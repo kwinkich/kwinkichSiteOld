@@ -1,0 +1,124 @@
+@import url('../../index.css');
+
+.repositoriesContainer {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 50px;
+}
+
+.repositoryCard {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	max-width: 600px;
+	border: 3px solid var(--acent-color);
+	border-radius: 15px;
+	padding: 20px 30px 45px 30px;
+}
+
+.repositoryCard::before {
+	position: absolute;
+	content: '';
+	width: 0%;
+	height: 100%;
+	background-color: var(--second-bg-color);
+	top: 0;
+	left: 0;
+	transition: all 0.5s;
+	z-index: -1;
+}
+
+.repositoryCard:hover::before {
+	width: 100%;
+}
+
+
+.repositoryName {
+	font-weight: 700;
+	font-size: 26px;
+	line-height: 32px;
+	color: var(--text-color);
+	margin-bottom: 12px;
+}
+
+.repositoryDescriptionT {
+	font-weight: 600;
+	font-size: 18px;
+	line-height: 20px;
+	color: var(--text-color);
+	margin-bottom: 8px;
+}
+
+.repositoryDescription {
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 140%;
+	letter-spacing: 0.01em;
+	color: var(--text-color);
+	margin-bottom: 8px;
+}
+
+.repositoryStatus {
+	margin-bottom: 40px;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 140%;
+	letter-spacing: 0.01em;
+	color: var(--text-color);
+	margin-bottom: 64px;
+}
+
+.repositoryLink {
+	position: relative;
+	display: inline;
+	font-weight: 600;
+	font-size: 16px;
+	padding: 25px;
+	background-color: transparent;
+	color: var(--acent-color);
+	border: 2px solid var(--acent-color);
+	transition: all 0.5s;
+	z-index: 1;
+}
+
+.repositoryLink::before {
+	position: absolute;
+	content: '';
+	width: 0%;
+	height: 100%;
+	background-color: var(--acent-color);
+	top: 0;
+	left: 0;
+	transition: all 0.5s;
+	z-index: -1;
+}
+
+.repositoryLink:hover {
+	color: var(--bg-color);
+	box-shadow: 0px 0px 20px var(--acent-color-opacity);
+}
+
+.repositoryLink:hover::before {
+	width: 100%;
+}
+
+
+@media (max-width: 740px) {
+	.repositoriesContainer {
+		display: flex;
+		flex-direction: column;
+	}
+}
+
+@media (max-width: 520px) {
+	.repositoryCard {
+		max-width: 350px;
+	}
+}
+
+@media (max-width: 400px) {
+	.repositoryName {
+		font-size: 24px;
+	}
+}

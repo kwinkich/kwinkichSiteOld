@@ -1,0 +1,95 @@
+@import url('../../index.css');
+
+.aboutImg {
+	position: relative;
+	width: 150px;
+	border-radius: 50%;
+	display: flex;
+	justify-content: center;
+	margin-bottom: 84px;
+}
+
+
+
+.imageGit {
+	width: 150px;
+	border-radius: 50%;
+}
+
+.circleSpin {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%) rotate(0);
+	width: 110%;
+	height: 110%;
+	border-radius: 50%;
+	border-top: 2px solid var(--second-bg-color);
+	border-bottom: 2px solid var(--second-bg-color);
+	border-left: 2px solid var(--acent-color);
+	border-right: 2px solid var(--acent-color);
+	animation: spinCircle 9s ease-in-out infinite;
+}
+
+@keyframes spinCircle {
+	0% {
+		transform: translate(-50%, -50%) rotate(0);
+	}
+
+	10% {
+		transform: translate(-50%, -50%) rotate(26deg);
+	}
+
+	20% {
+		transform: translate(-50%, -50%) rotate(0);
+	}
+
+	30% {
+		transform: translate(-50%, -50%) rotate(-26deg);
+	}
+
+	40% {
+		transform: translate(-50%, -50%) rotate(36deg);
+	}
+
+	50% {
+		transform: translate(-50%, -50%) rotate(0);
+	}
+
+	60% {
+		transform: translate(-50%, -50%) rotate(-36deg);
+	}
+
+	60% {
+		transform: translate(-50%, -50%) rotate(0);
+	}
+
+	70% {
+		transform: translate(-50%, -50%) rotate(46deg);
+	}
+
+	80% {
+		transform: translate(-50%, -50%) rotate(0);
+	}
+
+	90% {
+		transform: translate(-50%, -50%) rotate(-46deg);
+	}
+
+	100% {
+		transform: translate(-50%, -50%) rotate(0);
+	}
+}
+
+
+@media (max-width: 520px) {
+	.aboutImg {
+		width: 130px;
+	}
+
+
+
+	.imageGit {
+		width: 130px;
+	}
+}
