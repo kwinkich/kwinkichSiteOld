@@ -1,15 +1,4 @@
-@import '../Btn/Btn.module.css';
-@import '../CardProject/CardProject.module.css';
-@import '../Footer/Footer.module.css';
-@import '../Header/Header.module.css';
-@import '../Image/Image.module.css';
-@import '../Logo/Logo.module.css';
-@import '../Media/Media.module.css';
-@import '../Skills/Skills.module.css';
-@import '../Text/Text.module.css';
 @import url('../../index.css');
-
-
 
 body {
 	background-color: #0A1623;
