@@ -5,7 +5,6 @@ import PropTypes from 'prop-types';
 const getProjectStatus = (lastCommitDate) => {
   const currentDate = new Date();
   const threeDaysAgo = new Date().setDate(currentDate.getDate() - 5);
-
   return lastCommitDate > threeDaysAgo ? 'На стадії розробки' : 'Виконано';
 };
 

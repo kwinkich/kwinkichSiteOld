@@ -19,11 +19,6 @@ function Header() {
 							<li><a href="#media">Контакти</a></li>
 						</ul>
 					</nav>
-					<div className={styles.lang}>
-						<p>Мова:</p>
-						<button><img src={ukr} alt="" /></button>
-						<button><img src={en} alt="" /></button>
-					</div>	
 					<div className={styles.burger}>
 						<span></span>
 					</div>
