@@ -1,11 +1,9 @@
-import React, { useState, useEffect, useRef } from 'react';
-import { gsap } from 'gsap';
+import React, { useState } from 'react';
 import Logo from '../Logo/Logo.jsx';
 import styles from './Header.module.css';
 
 const Header = () => {
   const [burgerActive, setBurgerActive] = useState(false);
-  const headerRef = useRef(null);
 
   const handleClick = () => {
     setBurgerActive(!burgerActive);
@@ -15,16 +13,10 @@ const Header = () => {
     setBurgerActive(false);
   };
 
-  useEffect(() => {
-    const header = headerRef.current;
-
-    gsap.set(header, { y: -300 });
-    gsap.to(header, { y: 0, duration: 1.3, ease: 'power2.out' });
-  }, []);
 
   return (
 
-      <header className={styles.header} ref={headerRef} id='header'>
+      <header className={styles.header} id='header'>
 				<div className={styles.container}>
 				<div className={styles.content}>
           <Logo />
