@@ -6,7 +6,7 @@ const CodingSkillsList = () => {
   const skills = [
     { name: 'Html', level: '80' },
     { name: 'JS', level: '20' },
-		{ name: 'JS', level: '5' },
+		{ name: 'Python', level: '5' },
     { name: 'Rust', level: '5' },
   ];
 

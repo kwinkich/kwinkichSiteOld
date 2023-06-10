@@ -274,6 +274,15 @@ body {
 }
 
 @media (max-width: 1070px) {
+
+	::-webkit-scrollbar {
+		display: none;
+	}
+
+	::-webkit-scrollbar-thumb {
+		display: none;
+	}
+
 	.container {
 		max-width: 750px;
 	}
