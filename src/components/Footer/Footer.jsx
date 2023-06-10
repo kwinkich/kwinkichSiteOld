@@ -13,9 +13,9 @@ function Footer() {
 								<p>Почта для  зв`язку</p>
 								<a href="#">vankord21@gmail.com</a>
 							</div>
-							<button className={styles.blockUp}>
+							<a href='#header' className={styles.blockUp}>
 								<FontAwesomeIcon icon={faArrowUp} className={styles.upIcon}/>
-							</button>
+							</a>
 					</div>
 				</div>
 			</footer>
