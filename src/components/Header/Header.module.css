@@ -131,6 +131,22 @@ button {
 		max-width: 520px;
 	}
 
+	.content {
+		flex-wrap: wrap;
+	}
+
+	.nav {
+		margin-top: 15px;
+	}
+}
+
+@media (max-width: 520px) {
+	.container {
+		max-width: 420px;
+	}
+}
+
+@media (max-width: 500px) {
 	.burger {
 		display: block;
 		z-index: 1001;
@@ -150,7 +166,7 @@ button {
 		bottom: 0;
 		left: -40px;
 		right: 0;
-		z-index: 1000;
+		z-index: 50;
 		padding: 150px 0 0 60px;
 		background-color: var(--second-bg-color);
 	}
@@ -161,18 +177,10 @@ button {
 
 	.nav ul li a {
 		font-size: 26px;
-		pointer-events: none;
 	}
 
 	.nav ul li:not(:last-child) {
 		margin-bottom: 30px;
-	}
-
-}
-
-@media (max-width: 520px) {
-	.container {
-		max-width: 420px;
 	}
 }
 
