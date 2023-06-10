@@ -1,3 +1,5 @@
+import { useEffect, useRef } from 'react';
+import { gsap } from 'gsap';
 import styles from './Skills.module.css'
 
 const CodingSkillsList = () => {
@@ -8,10 +10,40 @@ const CodingSkillsList = () => {
     { name: 'Rust', level: '5' },
   ];
 
+	const codingWrapperRef = useRef(null);
+	const codingTextRef = useRef(null);
+
+
+	useEffect(()=>{
+		const codingWrapperElement = codingWrapperRef.current;
+		const codingTextElement = codingTextRef.current;
+		gsap.set(codingWrapperElement, {x: -1300});
+		gsap.to(codingWrapperElement, {
+			x: 0,
+			duration: 2,
+			ease: 'power2.out',
+			scrollTrigger: {
+				trigger: codingWrapperElement,
+				start: 'top 80%', // Начало анимации при достижении 80% от верха экрана
+			},
+		});
+		gsap.set(codingTextElement, {x: -1300});
+		gsap.to(codingTextElement, {
+			x: 0,
+			duration: 1,
+			ease: 'power2.out',
+			scrollTrigger: {
+				trigger: codingTextElement,
+				start: 'top 80%', // Начало анимации при достижении 80% от верха экрана
+			},
+		});
+	})
+
+
   return (
     <div>
-      <h1 className={styles.headingSkills}>Программування</h1>
-      <div className={styles.skillsGrid}>
+      <h1 className={styles.headingSkills} ref={codingTextRef}>Программування</h1>
+      <div className={styles.skillsGrid} ref={codingWrapperRef}>
         {skills.map((skill, index) => (
           <div key={index} className={styles.skillCard}>
             <h2>{skill.name}</h2>
