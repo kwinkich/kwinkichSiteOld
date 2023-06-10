@@ -1,4 +1,5 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
+import { gsap } from 'gsap';
 import styles from './CardProject.module.css'
 import PropTypes from 'prop-types';
 
@@ -37,6 +38,23 @@ RepositoryCard.propTypes = {
 
 const RepositoryList = () => {
   const [repositories, setRepositories] = useState([]);
+	const cardWrapperRef = useRef(null);
+
+	useEffect(()=>{
+		const cardWrapperElement = cardWrapperRef.current;
+		gsap.set(cardWrapperElement, {x: -1300});
+		gsap.to(cardWrapperElement, {
+			x: 0,
+			duration: 2,
+			ease: 'power2.out',
+			scrollTrigger: {
+				trigger: cardWrapperElement,
+				start: 'top 90%', // Начало анимации при достижении 80% от верха экрана
+			},
+		});
+	})
+
+
 
   useEffect(() => {
     const fetchRepositories = async () => {
@@ -54,7 +72,7 @@ const RepositoryList = () => {
 
   return (
     <div>
-      <div id="repositories-container" className={styles.repositoriesContainer}>
+      <div id="repositories-container" className={styles.repositoriesContainer} ref={cardWrapperRef}>
         {repositories.map((repository, index) => (
           <RepositoryCard key={index} repository={repository} />
         ))}

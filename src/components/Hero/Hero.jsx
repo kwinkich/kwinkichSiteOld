@@ -16,8 +16,6 @@ import mainBg from '../../assets/main-bg.png';
 import styles from './Hero.module.css';
 
 gsap.registerPlugin(ScrollTrigger);
-gsap.registerPlugin(ScrollTrigger);
-const { FadeIn } = gsap;
 
 function Hero() {
   const textRef = useRef(null);
@@ -26,14 +24,28 @@ function Hero() {
 	const aboutTextRef = useRef(null);
 	const aboutTextSecondRef = useRef(null);
 	const aboutImageRef = useRef(null);
+	const projectsTextRef = useRef(null);
+	const cardProjectsRef = useRef(null);
+	const skillsTextRef = useRef(null);
+	const codingSkillsRef = useRef(null);	
+	const profSkillsRef = useRef(null);	
+	const mediaTextRef = useRef(null);	
+	const mediaRef = useRef(null);	
 
   useEffect(() => {
     const textElement = textRef.current;
     const iconsElement = iconsRef.current;
     const imageElement = imageRef.current;
-		const aboutTextElement = aboutTextRef.current;
-		const aboutTextSecondElement = aboutTextSecondRef.current;
-		const aboutImageElement = aboutImageRef.current;
+    const aboutTextElement = aboutTextRef.current;
+    const aboutTextSecondElement = aboutTextSecondRef.current;
+    const aboutImageElement = aboutImageRef.current;
+    const projectsTextElement = projectsTextRef.current;
+    const cardProjectsElement = cardProjectsRef.current;
+    const skillsTextElement = skillsTextRef.current;
+    const codingSkillsElement = codingSkillsRef.current;
+    const profSkillsElement = profSkillsRef.current;
+		const mediaTextElement = mediaTextRef.current;
+		const mediaElement = mediaRef.current;
 
     gsap.set(textElement, { x: -900 });
     gsap.to(textElement, { x: 0, duration: 1.3, ease: 'power2.out' });
@@ -44,38 +56,115 @@ function Hero() {
     gsap.set(imageElement, { opacity: 0 });
     gsap.to(imageElement, { opacity: 1, duration: 1, delay: 0.5 });
 
-		gsap.set(aboutTextElement, {x: -1300});
-		gsap.to(aboutTextElement, {
+    gsap.set(aboutTextElement, { x: -1300 });
+    gsap.to(aboutTextElement, {
       x: 0,
       duration: 1.3,
       ease: 'power2.out',
       scrollTrigger: {
         trigger: aboutTextSecondElement,
-        start: 'top 90%', // Начало анимации при достижении 80% от верха экрана
+        start: 'top 90%',
       },
     });
 
-		gsap.set(aboutTextSecondElement, {x: -1300});
-		gsap.to(aboutTextSecondElement, {
+    gsap.set(aboutTextSecondElement, { x: -1300 });
+    gsap.to(aboutTextSecondElement, {
       x: 0,
       duration: 1.7,
       ease: 'power2.out',
       scrollTrigger: {
         trigger: aboutTextSecondElement,
-        start: 'top 90%', // Начало анимации при достижении 80% от верха экрана
+        start: 'top 90%',
       },
     });
 
-		gsap.set(aboutImageElement, { opacity: 0 });
-    gsap.to(aboutImageElement, { 
-			opacity: 1, 
-			duration: 1.7, 
-			ease: 'power2.out',
+    gsap.set(aboutImageElement, { opacity: 0 });
+    gsap.to(aboutImageElement, {
+      opacity: 1,
+      duration: 1.7,
+      ease: 'power2.out',
       scrollTrigger: {
         trigger: aboutImageElement,
-        start: 'top 90%', // Начало анимации при достижении 80% от верха экрана
-      }, });
+        start: 'top 90%',
+      },
+    });
 
+    gsap.set(projectsTextElement, { x: -1300 });
+    gsap.to(projectsTextElement, {
+      x: 0,
+      duration: 1.3,
+      ease: 'power2.out',
+      scrollTrigger: {
+        trigger: projectsTextElement,
+        start: 'top 90%',
+      },
+    });
+
+    gsap.set(cardProjectsElement, { x: -1300 });
+    gsap.to(cardProjectsElement, {
+      x: 0,
+      duration: 2,
+      ease: 'power2.out',
+      scrollTrigger: {
+        trigger: cardProjectsElement,
+        start: 'top 90%',
+      },
+    });
+
+    gsap.set(skillsTextElement, { x: -1300 });
+    gsap.to(skillsTextElement, {
+      x: 0,
+      duration: 1.3,
+      ease: 'power2.out',
+      scrollTrigger: {
+        trigger: skillsTextElement,
+        start: 'top 80%',
+      },
+    });
+
+    gsap.set(codingSkillsElement, { x: -1300 });
+    gsap.to(codingSkillsElement, {
+      x: 0,
+      duration: 2,
+      ease: 'power2.out',
+      scrollTrigger: {
+        trigger: codingSkillsElement,
+        start: 'top 80%',
+      },
+    });
+
+    gsap.set(profSkillsElement, { x: -1300 });
+    gsap.to(profSkillsElement, {
+      x: 0,
+      duration: 2,
+      ease: 'power2.out',
+      scrollTrigger: {
+        trigger: profSkillsElement,
+        start: 'top 80%',
+      },
+    });
+
+		gsap.set(mediaTextElement, { x: -1300 });
+    gsap.to(mediaTextElement, {
+      x: 0,
+      duration: 2,
+      ease: 'power2.out',
+      scrollTrigger: {
+        trigger: mediaTextElement,
+        start: 'top 80%',
+      },
+    });
+
+		gsap.set(mediaElement, { x: -1300 });
+    gsap.to(mediaElement, {
+      x: 0,
+      duration: 2,
+      ease: 'power2.out',
+      scrollTrigger: {
+        trigger: mediaElement,
+        start: 'top 80%',
+      },
+    });
   }, []);
 
 	
@@ -125,9 +214,9 @@ function Hero() {
       <section className={styles.projects} id='projects'>
         <div className={styles.container}>
           <div className={styles.projectsContent}>
-            <h2 className={styles.heading}>Мої <span>проєкти</span></h2>
+            <h2 className={styles.heading} ref={projectsTextRef}>Мої <span>проєкти</span></h2>
             <div className={styles.contentProjects}>
-              <RepositoryList />
+              <RepositoryList ref={cardProjectsRef}/>
             </div>
           </div>
         </div>
@@ -136,13 +225,13 @@ function Hero() {
       <section className={styles.skills} id='skills'>
         <div className={styles.container}>
           <div className={styles.skillsContent}>
-          <h2 className={styles.heading}>Мої <span>навички</span></h2>
+          <h2 className={styles.heading} ref={skillsTextRef}>Мої <span>навички</span></h2>
           <div className={styles.skillBlock}>
-            <div className={styles.skillCoding}>
-              <CodingSkillsList />
+            <div className={styles.skillCoding} ref={codingSkillsRef}>
+              <CodingSkillsList/>
             </div>
-            <div className={styles.profCoding}>
-              <ProfSkillsList />
+            <div className={styles.profCoding} ref={profSkillsRef}>
+              <ProfSkillsList/>
             </div>
           </div>
           </div>
@@ -151,9 +240,9 @@ function Hero() {
 
       <section className={styles.media} id='media'>
         <div className={styles.container}>
-          <div className={styles.heading}>Мої <span>контакти</span></div>
+          <div className={styles.heading} ref={mediaTextRef}>Мої <span>контакти</span></div>
           <div className={styles.mediaContent}>
-            <Media />
+            <Media ref={mediaRef}/>
           </div>
         </div>
       </section>
