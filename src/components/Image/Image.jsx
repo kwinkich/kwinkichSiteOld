@@ -1,10 +1,28 @@
-import { useState, useEffect } from 'react';
+import { gsap } from 'gsap';
+import { useState, useEffect, useRef } from 'react';
 import axios from 'axios';
 import styles from './Image.module.css'
 import PropTypes from 'prop-types';
 
 const Image = ({ username }) => {
   const [avatarUrl, setAvatarUrl] = useState('');
+	const imageWrapperRef = useRef(null);
+
+  useEffect(() => {
+    const imageWrapperElement = imageWrapperRef.current;
+
+    gsap.set(imageWrapperElement, { opacity: 0 });
+    gsap.to(imageWrapperElement, { 
+			opacity: 1, 
+			duration: 1.7,  
+			ease: 'power2.out',
+      scrollTrigger: {
+        trigger: imageWrapperElement,
+        start: 'top 90%', // Начало анимации при достижении 80% от верха экрана
+      }, });
+  }, []);
+
+
 
   useEffect(() => {
     const fetchAvatar = async () => {
@@ -21,7 +39,7 @@ const Image = ({ username }) => {
   }, [username]);
 
   return (
-			<div className={styles.aboutImg}>
+			<div className={styles.aboutImg} ref={imageWrapperRef}>
 				<img src={avatarUrl} alt="GitHub Avatar" className={styles.imageGit}/>
 				<span className={styles.circleSpin}></span>
 			</div>

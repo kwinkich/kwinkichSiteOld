@@ -1,6 +1,7 @@
 @import url('../../index.css');
 
 .btn {
+	display: inline-block;
 	position: relative;
 	font-weight: 500;
 	font-size: 18px;
@@ -11,7 +12,7 @@
 	transition: all 0.5s;
 	overflow: hidden;
 	z-index: 1;
-
+	animation: btnAnim 1.3s;
 }
 
 .btn::before {
@@ -35,6 +36,15 @@
 	width: 100%;
 }
 
+@keyframes btnAnim {
+	from {
+		transform: translateX(-900px);
+	}
+
+	to {
+		transform: translateX(0px);
+	}
+}
 
 @media (max-width: 520px) {
 	.btn {

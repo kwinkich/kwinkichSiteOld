@@ -11,7 +11,7 @@ function Footer() {
 					<Logo/>
 							<div className={styles.blockMail}>
 								<p>Почта для  зв`язку</p>
-								<a href="#">vankord21@gmail.com</a>
+								<a href="mailto:vankord21@gmail.com">vankord21@gmail.com</a>
 							</div>
 							<a href='#header' className={styles.blockUp}>
 								<FontAwesomeIcon icon={faArrowUp} className={styles.upIcon}/>
