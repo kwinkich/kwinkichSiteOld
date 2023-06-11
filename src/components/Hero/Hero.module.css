@@ -2,7 +2,6 @@
 
 body {
 	background-color: #0A1623;
-	overflow-x: hidden;
 }
 
 ::-webkit-scrollbar {
@@ -52,6 +51,7 @@ body {
 	display: flex;
 	align-items: center;
 	margin-bottom: 100px;
+	overflow: hidden;
 }
 
 .heroImage {
@@ -297,13 +297,24 @@ body {
 	}
 }
 
-@media (max-width: 740px) {
+@media (max-width: 770px) {
 	.container {
-		max-width: 520px;
+		max-width: 620px;
 	}
 }
 
-@media (max-width: 570px) {
+@media (max-width: 640px) {
+	.container {
+		max-width: 570px;
+	}
+}
+
+@media (max-width: 575px) {
+
+	.container {
+		max-width: 420px;
+	}
+
 	.textAnimate {
 		font-size: 34px;
 	}
@@ -356,16 +367,9 @@ body {
 }
 
 @media (max-width: 470px) {
-	body {
-		overflow-x: hidden;
-	}
 
 	.container {
 		max-width: 370px;
-	}
-
-	.textAnimate {
-		font-size: 30px;
 	}
 
 	@keyframes homeBgText {
@@ -391,5 +395,30 @@ body {
 @media (max-width: 400px) {
 	.container {
 		max-width: 350px;
+	}
+}
+
+@media (max-width: 370px) {
+	.container {
+		max-width: 300px;
+	}
+
+	@keyframes homeBgText {
+
+		0%,
+		10%,
+		100% {
+			background-position: -16rem 0;
+		}
+
+		65%,
+		85% {
+			background-position: 0rem 0;
+		}
+	}
+
+	.textAnimate {
+		font-size: 22px;
+		margin-bottom: 30px;
 	}
 }

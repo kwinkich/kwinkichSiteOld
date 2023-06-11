@@ -3,7 +3,7 @@
 .textContainer {
 	display: flex;
 	justify-content: center;
-
+	max-width: 100%;
 }
 
 .textStroke {
@@ -40,8 +40,6 @@
 	}
 }
 
-
-
 @media (max-width: 730px) {
 
 	.textStroke {
@@ -65,5 +63,11 @@
 @media (max-width: 470px) {
 	.textStroke {
 		font-size: 46px;
+	}
+}
+
+@media (max-width: 370px) {
+	.textStroke {
+		font-size: 42px;
 	}
 }

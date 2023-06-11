@@ -41,7 +41,6 @@ const Image = ({ username }) => {
   return (
 			<div className={styles.aboutImg} ref={imageWrapperRef}>
 				<img src={avatarUrl} alt="GitHub Avatar" className={styles.imageGit}/>
-				<span className={styles.circleSpin}></span>
 			</div>
   );
 };

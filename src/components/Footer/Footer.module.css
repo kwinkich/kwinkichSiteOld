@@ -94,13 +94,19 @@
 	}
 }
 
-@media (max-width: 740px) {
+@media (max-width: 770px) {
 	.container {
-		max-width: 520px;
+		max-width: 620px;
 	}
 }
 
-@media (max-width: 520px) {
+@media (max-width: 640px) {
+	.container {
+		max-width: 570px;
+	}
+}
+
+@media (max-width: 575px) {
 	.container {
 		max-width: 420px;
 	}
@@ -116,7 +122,6 @@
 	}
 }
 
-
 @media (max-width: 470px) {
 	.container {
 		max-width: 370px;
@@ -126,5 +131,11 @@
 @media (max-width: 400px) {
 	.container {
 		max-width: 350px;
+	}
+}
+
+@media (max-width: 370px) {
+	.container {
+		max-width: 300px;
 	}
 }

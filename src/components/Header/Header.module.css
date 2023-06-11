@@ -125,28 +125,17 @@ button {
 
 }
 
-
-@media (max-width: 740px) {
+@media (max-width: 770px) {
 	.container {
-		max-width: 520px;
-	}
-
-	.content {
-		flex-wrap: wrap;
-	}
-
-	.nav {
-		margin-top: 15px;
+		max-width: 620px;
 	}
 }
 
-@media (max-width: 520px) {
+@media (max-width: 640px) {
 	.container {
-		max-width: 420px;
+		max-width: 570px;
 	}
-}
 
-@media (max-width: 500px) {
 	.burger {
 		display: block;
 		z-index: 1001;
@@ -184,7 +173,15 @@ button {
 	}
 }
 
+@media (max-width: 575px) {
+	.container {
+		max-width: 420px;
+	}
+}
+
 @media (max-width: 470px) {
+
+
 	.container {
 		max-width: 370px;
 	}
@@ -193,6 +190,12 @@ button {
 @media (max-width: 400px) {
 	.container {
 		max-width: 350px;
+	}
+}
+
+@media (max-width: 370px) {
+	.container {
+		max-width: 300px;
 	}
 }
 
