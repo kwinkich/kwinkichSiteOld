@@ -16,7 +16,7 @@ const RepositoryCard = ({ repository }) => {
   return (
     <div className={styles.repositoryCard}>
       <h2 className={styles.repositoryName}>{name}</h2>
-      <p className={styles.repositoryDescriptionT}>Опис проєекту</p>
+      <p className={styles.repositoryDescriptionT}>Опис проекту</p>
       <p className={styles.repositoryDescription}>{descriptionText}</p>
       <p className={styles.repositoryStatus}>Статус: {status}</p>
       <div className={styles.repositoryLinkBlock}>
@@ -49,7 +49,7 @@ const RepositoryList = () => {
 			ease: 'power2.out',
 			scrollTrigger: {
 				trigger: cardWrapperElement,
-				start: 'top 90%', // Начало анимации при достижении 80% от верха экрана
+				start: 'top 90%',
 			},
 		});
 	})

@@ -214,7 +214,7 @@ function Hero() {
       <section className={styles.projects} id='projects'>
         <div className={styles.container}>
           <div className={styles.projectsContent}>
-            <h2 className={styles.heading} ref={projectsTextRef}>Мої <span>проєкти</span></h2>
+            <h2 className={styles.heading} ref={projectsTextRef}>Мої <span>проекти</span></h2>
             <div className={styles.contentProjects}>
               <RepositoryList ref={cardProjectsRef}/>
             </div>
